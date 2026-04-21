@@ -146,7 +146,7 @@
 
     mermaid.initialize({
 	  startOnLoad: false,
-	  layout: "elk.sporeOverlap"
+	  layout: "elk"
     });
 
     // Make Mermaid accessible to your existing Angular code that calls mermaid.render(...)
@@ -247,7 +247,7 @@
   });
 
   // 3) Build the Mermaid flowchart text
-  var conceptualViewMarkup = "flowchart TB\n";
+  var conceptualViewMarkup = "flowchart LR\n";
   var direction = "";
 
   angular.forEach($scope.filteredConceptualView, function (value) {
