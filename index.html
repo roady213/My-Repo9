@@ -144,10 +144,25 @@
 
     mermaid.registerLayoutLoaders(elkLayouts);
 
-    mermaid.initialize({
+	mermaid.initialize({
 	  startOnLoad: false,
-	  layout: "elk"
-    });
+	  layout: "elk",
+	  theme: "base",
+	  themeVariables: {
+		fontFamily: "Inter, Segoe UI, Calibri, Arial, sans-serif",
+		fontSize: "14px",
+
+		primaryColor: "#ffffff",
+		primaryTextColor: "#1f2937",
+		primaryBorderColor: "#cbd5e1",
+
+		lineColor: "#64748b",
+		edgeLabelBackground: "#ffffff",
+
+		secondaryColor: "#f1f5f9",
+		tertiaryColor: "#ffffff"
+	  }
+	});
 
     // Make Mermaid accessible to your existing Angular code that calls mermaid.render(...)
     window.mermaid = mermaid;
